@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "If you use CarboSeis, please cite it and CarboKitten.jl."
+title: "CarboSeis: a workflow for constructing seismic models of carbonate platforms from CarboKitten forward simulations"
+version: 0.1.0
+date-released: 2026-10-23
+doi: 10.5281/zenodo.23608277
+repository-code: "https://github.com/yupenglee2006-ui/CarboSeis"
+abstract: >-
+  CarboSeis constructs a seismic model of a carbonate formation simulated with CarboKitten.jl.
+  From a scenario file that holds the petrophysical description of the formation it derives
+  texture, porosity, pore structure and elastic properties for every layer, embeds the carbonate
+  body in water, overburden and onlapping fill, and outputs post-stack synthetic seismic sections
+  by one-dimensional convolution or point-spread-function imaging.
+keywords:
+  - carbonate platform
+  - stratigraphic forward modelling
+  - rock physics
+  - synthetic seismic
+  - CarboKitten
+authors:
+  - family-names: Li
+    given-names: Yupeng
+license: MIT
+references:
+  - type: article
+    title: "CarboKitten.jl -- an open source toolkit for carbonate stratigraphic modeling"
+    authors:
+      - family-names: Hidding
+        given-names: Johan
+      - family-names: Jarochowska
+        given-names: Emilia
+      - family-names: Hohmann
+        given-names: Niklas
+      - family-names: Liu
+        given-names: Xianyi
+      - family-names: Burgess
+        given-names: Peter
+      - family-names: Spreeuw
+        given-names: Hanno
+    journal: "Geoscientific Model Development"
+    volume: 19
+    start: 6207
+    end: 6229
+    year: 2026
+    doi: 10.5194/gmd-19-6207-2026

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "carboseis"
+version = "0.1.0"
+description = "Seismic model construction for carbonate platforms simulated with CarboKitten.jl"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [{ name = "Yupeng Li" }]
+keywords = ["carbonate platform", "stratigraphic forward modelling", "rock physics",
+            "synthetic seismic", "CarboKitten"]
+dependencies = ["numpy>=1.24", "scipy>=1.10", "h5py>=3.8", "matplotlib>=3.7"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+carboseis = "carboseis.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/carboseis"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

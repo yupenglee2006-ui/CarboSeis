@@ -1,0 +1,85 @@
+parameter,statistic,D,D_bootstrap_p05,D_bootstrap_p95,robust
+Sea-level amplitude scale,top-carbonate amplitude,0.223,0.0214,1.47,0
+Sea-level amplitude scale,continuous intra-platform reflectors,0.266,0.0614,1.88,0
+Sea-level amplitude scale,platform RMS amplitude,1.76,0.847,7.69,0
+Sea-level amplitude scale,platform width in TWT,2.74,0.957,8.86,0
+Sea-level amplitude scale,margin dip,0.222,0.0261,1.08,0
+Sea-level amplitude scale,internal dominant frequency,0.332,0.0387,2.63,0
+Sea-level amplitude scale,high-amplitude continuous facies,0.327,0.134,0.973,0
+Sea-level time stretch,top-carbonate amplitude,0.893,0.0768,6.9,0
+Sea-level time stretch,continuous intra-platform reflectors,0.0704,0.00599,0.579,0
+Sea-level time stretch,platform RMS amplitude,1.15,0.318,5.8,0
+Sea-level time stretch,platform width in TWT,0.224,0.0413,1.08,0
+Sea-level time stretch,margin dip,0.229,0.0384,0.946,0
+Sea-level time stretch,internal dominant frequency,0.0323,0.0034,0.269,0
+Sea-level time stretch,high-amplitude continuous facies,0.143,0.0197,0.603,0
+Subsidence rate (m/Myr),top-carbonate amplitude,4.23,1.84,24.6,1
+Subsidence rate (m/Myr),continuous intra-platform reflectors,1.37,0.523,9.07,0
+Subsidence rate (m/Myr),platform RMS amplitude,2.8,1.05,13.5,1
+Subsidence rate (m/Myr),platform width in TWT,42.1,26.7,114,1
+Subsidence rate (m/Myr),margin dip,0.557,0.11,2.42,0
+Subsidence rate (m/Myr),internal dominant frequency,0.0465,0.0184,0.332,0
+Subsidence rate (m/Myr),high-amplitude continuous facies,0.433,0.19,1.21,0
+Euphotic max. growth (m/Myr),top-carbonate amplitude,0.854,0.0933,5.92,0
+Euphotic max. growth (m/Myr),continuous intra-platform reflectors,0.216,0.0457,1.58,0
+Euphotic max. growth (m/Myr),platform RMS amplitude,0.101,0.0139,0.709,0
+Euphotic max. growth (m/Myr),platform width in TWT,2.46,1.15,7.23,1
+Euphotic max. growth (m/Myr),margin dip,0.432,0.122,1.51,0
+Euphotic max. growth (m/Myr),internal dominant frequency,0.0287,0.000862,0.249,0
+Euphotic max. growth (m/Myr),high-amplitude continuous facies,0.398,0.16,1.3,0
+Transport coefficient (m/yr),top-carbonate amplitude,0.272,0.0413,1.81,0
+Transport coefficient (m/yr),continuous intra-platform reflectors,2.21,0.412,16.9,0
+Transport coefficient (m/yr),platform RMS amplitude,1.67,0.0395,14.4,0
+Transport coefficient (m/yr),platform width in TWT,33.1,18.5,93.4,1
+Transport coefficient (m/yr),margin dip,0.863,0.456,2.44,0
+Transport coefficient (m/yr),internal dominant frequency,0.0546,0.00101,0.538,0
+Transport coefficient (m/yr),high-amplitude continuous facies,0.0757,0.0172,0.256,0
+Meteoric tau_crit (Myr),top-carbonate amplitude,0.0367,0.00502,0.276,0
+Meteoric tau_crit (Myr),continuous intra-platform reflectors,0.0539,0,0.879,0
+Meteoric tau_crit (Myr),platform RMS amplitude,0.393,0.102,2.2,0
+Meteoric tau_crit (Myr),platform width in TWT,0,0,0,0
+Meteoric tau_crit (Myr),margin dip,0.00201,0.000344,0.00852,0
+Meteoric tau_crit (Myr),internal dominant frequency,0.0166,0.000235,0.141,0
+Meteoric tau_crit (Myr),high-amplitude continuous facies,0.0338,0.014,0.101,0
+Moldic porosity gain,top-carbonate amplitude,0.524,0.056,3.92,0
+Moldic porosity gain,continuous intra-platform reflectors,0.682,0.177,4.54,0
+Moldic porosity gain,platform RMS amplitude,1.42,0.468,7.26,0
+Moldic porosity gain,platform width in TWT,0,0,0,0
+Moldic porosity gain,margin dip,0.681,0.256,2.26,0
+Moldic porosity gain,internal dominant frequency,0.159,0.0186,1.28,0
+Moldic porosity gain,high-amplitude continuous facies,0.116,0.0504,0.336,0
+Burial cementation c_ch (1/km),top-carbonate amplitude,11.7,7.05,58.2,1
+Burial cementation c_ch (1/km),continuous intra-platform reflectors,0.245,0.088,1.52,0
+Burial cementation c_ch (1/km),platform RMS amplitude,3.05,1.55,12.7,1
+Burial cementation c_ch (1/km),platform width in TWT,0,0,0,0
+Burial cementation c_ch (1/km),margin dip,0.23,0.102,0.721,0
+Burial cementation c_ch (1/km),internal dominant frequency,0.0489,0.0201,0.345,0
+Burial cementation c_ch (1/km),high-amplitude continuous facies,0.368,0.187,0.987,0
+Compaction coefficient scale,top-carbonate amplitude,37.9,21.6,198,1
+Compaction coefficient scale,continuous intra-platform reflectors,0.682,0.352,3.68,0
+Compaction coefficient scale,platform RMS amplitude,6.28,2.94,28.1,1
+Compaction coefficient scale,platform width in TWT,0.0135,0.00187,0.0601,0
+Compaction coefficient scale,margin dip,0.551,0.213,1.71,0
+Compaction coefficient scale,internal dominant frequency,0.082,0.031,0.6,0
+Compaction coefficient scale,high-amplitude continuous facies,0.221,0.0857,0.726,0
+Interparticle aspect ratio,top-carbonate amplitude,13.4,7.43,70.6,1
+Interparticle aspect ratio,continuous intra-platform reflectors,0.266,0.0477,2,0
+Interparticle aspect ratio,platform RMS amplitude,0.642,0.221,3.09,0
+Interparticle aspect ratio,platform width in TWT,0,0,0,0
+Interparticle aspect ratio,margin dip,0.322,0.0736,1.2,0
+Interparticle aspect ratio,internal dominant frequency,0.47,0.179,3.63,0
+Interparticle aspect ratio,high-amplitude continuous facies,0.157,0.0646,0.413,0
+Gas column (m),top-carbonate amplitude,3.44,0.632,21,0
+Gas column (m),continuous intra-platform reflectors,0.118,0.0165,1.05,0
+Gas column (m),platform RMS amplitude,0.879,0.225,4.84,0
+Gas column (m),platform width in TWT,0,0,0,0
+Gas column (m),margin dip,0.46,0.169,1.52,0
+Gas column (m),internal dominant frequency,0.0143,8.87e-05,0.128,0
+Gas column (m),high-amplitude continuous facies,0.228,0.117,0.64,0
+Dominant frequency (Hz),top-carbonate amplitude,0.322,0.141,1.71,0
+Dominant frequency (Hz),continuous intra-platform reflectors,1.94,0.807,11.7,0
+Dominant frequency (Hz),platform RMS amplitude,2.82,1.17,12.9,1
+Dominant frequency (Hz),platform width in TWT,0,0,0,0
+Dominant frequency (Hz),margin dip,0.0578,0.0115,0.223,0
+Dominant frequency (Hz),internal dominant frequency,1.38,0.719,10.2,0
+Dominant frequency (Hz),high-amplitude continuous facies,1.14,0.341,3.61,0

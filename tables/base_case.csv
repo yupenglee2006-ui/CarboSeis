@@ -1,0 +1,29 @@
+quantity,interior,margin,slope,basin
+columns (50 m),22,12,63,43
+"uncompacted thickness, median (m)",550.3,540.8,278.1,160.6
+"compacted thickness, median (m)",402.2,388.1,131.4,62.93
+"depositional water depth, median (m)",0.1378,0.201,4.377,326.4
+volume deposited above fair-weather wave base,1,0.9467,0.5517,0
+volume with exposure > tau_crit (0.02 Myr),0.2674,0.2506,0.1438,0
+"porosity after diagenesis, mean",0.2106,0.2042,0.1742,0.1043
+"porosity before diagenesis, mean",0.2732,0.2674,0.2364,0.1583
+"Vp, mean (m/s)",4356,4375,4411,4386
+"density, mean (g/cm3)",2.36,2.371,2.418,2.52
+"impedance, mean (m/s g/cm3)",1.029e+04,1.038e+04,1.067e+04,1.105e+04
+"top reflection coefficient, median",0.2442,0.2522,0.2389,0.2382
+"top reflection positive (hard kick), fraction of traces",1,1,1,1
+"top amplitude Level 1, median",0.2481,0.2495,0.2365,0.2358
+"top amplitude Level 2 / Level 1, median",1.002,0.983,0.9733,0.9462
+"dip of carbonate top, 90th percentile (deg)",5.226,22.62,24.01,2.318
+texture fraction: Boundstone,0.361,0.3056,0.2048,2.086e-19
+texture fraction: Grainstone,0.3936,0.3947,0.2366,2.88e-16
+texture fraction: Packstone,0.2026,0.2435,0.2118,0.002298
+texture fraction: Wackestone,0.02062,0.03126,0.1301,0.1025
+texture fraction: Mudstone,0.01464,0.01721,0.122,0.3979
+texture fraction: Argillaceous,0.007544,0.007719,0.0947,0.4973
+facies fraction: euphotic,0.4719,0.4066,0.2887,0.001793
+facies fraction: oligophotic,0.3898,0.4543,0.3319,7.534e-06
+facies fraction: pelagic,0.04177,0.04029,0.2683,0.9947
+facies fraction: oligophotic transported,0.09647,0.0988,0.1112,0.003461
+"internal dominant frequency, Level 1 (Hz)",26.0,,,
+final water depth at platform centre (m),0.2,,,

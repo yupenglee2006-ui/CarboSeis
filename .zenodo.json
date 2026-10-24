@@ -1,0 +1,25 @@
+{
+  "title": "CarboSeis: a workflow for constructing seismic models of carbonate platforms from CarboKitten forward simulations",
+  "description": "CarboSeis builds a seismic model of a carbonate formation simulated with CarboKitten.jl. From one scenario file that holds the petrophysical description of the formation it derives texture, porosity, pore structure and elastic properties for every layer, embeds the carbonate body in water, overburden and onlapping fill, and outputs post-stack synthetic seismic sections by one-dimensional convolution or point-spread-function imaging. The archive contains the Python package, the Julia bridge that runs CarboKitten, the scripts that produce every figure and table of the manuscript, the scenario files and the verification tests.",
+  "creators": [
+    {
+      "name": "Li, Yupeng",
+      "affiliation": "EXPEC Advanced Research Center, Saudi Aramco, Beijing, China"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "carbonate platform",
+    "stratigraphic forward modelling",
+    "rock physics",
+    "synthetic seismic",
+    "CarboKitten",
+    "seismic modelling"
+  ],
+  "upload_type": "software",
+  "access_right": "open",
+  "language": "eng",
+  "version": "0.1.0",
+  "publication_date": "2026-10-23",
+  "notes": "The CarboSeis-CarboKitten bridge in ck-bridge/ is released under GPL-3.0-or-later, following CarboKitten.jl."
+}

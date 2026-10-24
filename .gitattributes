@@ -1,0 +1,19 @@
+# Keep the repository text-only for diffs, and mark the binary products explicitly.
+* text=auto
+
+*.py    text
+*.jl    text
+*.toml  text
+*.md    text
+*.tex   text
+*.cfg   text
+*.yml   text
+*.yaml  text
+*.cff   text
+
+*.pdf   binary
+*.png   binary
+*.h5    binary
+*.hdf5  binary
+*.pkl   binary
+*.zip   binary

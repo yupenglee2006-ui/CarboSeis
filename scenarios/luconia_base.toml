@@ -1,0 +1,201 @@
+# Central Luconia-type Miocene isolated platform (example application of the manuscript, Sect. 6).
+#
+# One scenario file holds both kinds of user input (manuscript Sect. 2, Table 1):
+#   [carbokitten]          the forward model, read by the CarboSeis-CarboKitten bridge; a change here
+#                          needs a new CarboKitten run.  It mirrors runs/validation_case.jl and
+#                          runs/ValidationConstants.jl of the CarboKitten research-paper repository
+#                          (Hidding et al., 2026; commit ec4cf5f).
+#   [grid] ... [seismic]   the petrophysical description of the formation, read by CarboSeis; a
+#                          change here reuses the stored run (carboseis run ... --set KEY=VALUE).
+# Units are in the key names.
+
+[meta]
+name = "luconia_base"
+description = "Central Luconia-type isolated platform, CarboKitten validation set-up"
+
+[carbokitten]
+tag = "luconia_base"
+output = "data/carbokitten/luconia_base.h5"
+grid_size = [140, 100]
+phys_scale_m = 50.0
+boundary = "periodic"
+t0_Myr = -15.48
+dt_yr = 400.0
+steps = 10000
+ca_interval = 10
+ca_random_seed = 1
+subsidence_rate_m_per_Myr = 150.0
+disintegration_rate_m_per_Myr = 50.0
+lithification_time_yr = 100.0
+insolation_W_m2 = 400.0
+sediment_buffer_size = 50
+depositional_resolution_m = 0.5
+sea_level_file = "data/external/Morley_2021.txt"   # fetched by scripts/fetch_inputs.py
+sea_level_window_Ma = [8.0, 15.5]
+sea_level_scale = 1.0            # E3: anomaly about the window mean is scaled
+sea_level_time_stretch = 1.0     # E3: >1 lengthens the sea-level cycles
+profile_row = 50                 # 1-based y index of the dip section
+profile_write_interval = 5       # 5 x 400 yr = 2 kyr per stratigraphic layer
+volume_write_interval = 1000
+# new_f[i] = sum_j T[i][j] * old_f[j]; oligophotic disintegrated material becomes facies 4
+disintegration_transfer = [[1, 0, 0, 0], [0, 0, 0, 0], [0, 0, 1, 0], [0, 1, 0, 1]]
+
+[carbokitten.prerun]             # dome pre-run that generates the initial topography
+output = "data/carbokitten/luconia_prerun.h5"
+dt_yr = 100.0
+steps = 5000
+ca_interval = 1
+ca_random_seed = 0
+sea_level_period_Myr = 0.2
+sea_level_amplitude_m = 30.0
+sea_level_base_m = 30.0
+subsidence_rate_m_per_Myr = 10.0
+disintegration_rate_m_per_Myr = 20.0
+lithification_time_yr = 50.0
+dome_top_m = 45.0
+dome_radius_fraction = 0.2
+dome_flank_slope = 0.1
+dome_floor_m = -70.0
+disintegration_transfer = [[1, 0, 0, 0], [0, 0, 0, 0], [0, 0, 1, 0], [1, 0, 0, 1]]
+
+[[carbokitten.facies]]
+name = "euphotic"
+type = "benthic"
+active = true
+maximum_growth_rate_m_per_Myr = 1800.0
+extinction_coefficient_per_m = 0.6
+saturation_intensity_W_m2 = 60.0
+transport_coefficient_m_per_yr = 2.0
+
+[[carbokitten.facies]]
+name = "oligophotic"
+type = "benthic"
+active = true
+maximum_growth_rate_m_per_Myr = 800.0
+extinction_coefficient_per_m = 0.1
+saturation_intensity_W_m2 = 60.0
+transport_coefficient_m_per_yr = 2.0
+
+[[carbokitten.facies]]
+name = "pelagic"
+type = "pelagic"
+active = false
+maximum_growth_rate_per_Myr = 8.0
+extinction_coefficient_per_m = 0.6
+saturation_intensity_W_m2 = 60.0
+maximum_production_depth_m = 50.0
+transport_coefficient_m_per_yr = 2.0
+
+[[carbokitten.facies]]
+name = "oligophotic transported"
+type = "none"
+active = false
+transport_coefficient_m_per_yr = 2.0
+
+# ------------------------------------------------------------------ CarboSeis
+# Step 1, stratigraphic grid (Sect. 3.1): section group and meteoric zone d_m of Eq. (3)
+[grid]
+group = "profile"
+meteoric_zone_m = 20.0
+meteoric_profile = "step"       # or "exponential": exposure weighted by exp(-depth / meteoric_zone_m)
+
+# Step 2, texture (Sect. 3.2, Table 2): membership matrix M(w) of Eq. (4)
+[texture]
+# Dunham-type textures, in this order:
+names = ["boundstone", "grainstone", "packstone", "wackestone", "mudstone", "argillaceous"]
+fair_weather_wave_base_m = 10.0
+storm_wave_base_m = 40.0
+transition_width_m = 3.0
+# Membership rows per facies (same order as [[carbokitten.facies]]); each row sums to 1.
+shallow = [[0.70, 0.30, 0.00, 0.00, 0.00, 0.00],
+           [0.00, 0.50, 0.50, 0.00, 0.00, 0.00],
+           [0.00, 0.00, 0.00, 0.40, 0.40, 0.20],
+           [0.00, 0.80, 0.20, 0.00, 0.00, 0.00]]
+mid     = [[0.40, 0.30, 0.30, 0.00, 0.00, 0.00],
+           [0.00, 0.00, 0.60, 0.40, 0.00, 0.00],
+           [0.00, 0.00, 0.00, 0.30, 0.40, 0.30],
+           [0.00, 0.40, 0.60, 0.00, 0.00, 0.00]]
+deep    = [[0.00, 0.00, 0.50, 0.50, 0.00, 0.00],
+           [0.00, 0.00, 0.00, 0.40, 0.60, 0.00],
+           [0.00, 0.00, 0.00, 0.10, 0.40, 0.50],
+           [0.00, 0.00, 0.40, 0.60, 0.00, 0.00]]
+
+# Step 3, compaction (Sect. 3.3, Table 4): Athy trends of Eq. (5)
+[compaction]
+# Per texture: depositional porosity and Athy coefficient (1/km)
+phi0 = [0.40, 0.45, 0.55, 0.65, 0.70, 0.65]
+c_per_km = [0.10, 0.25, 0.40, 0.50, 0.55, 0.60]
+
+# Step 4, diagenesis (Sect. 3.4, Table 3)
+[diagenesis]
+# Pore-type fractions per texture: [interparticle, stiff (moldic/vuggy), crack-like]
+pore_types = [[0.58, 0.40, 0.02],
+              [0.88, 0.10, 0.02],
+              [0.91, 0.05, 0.04],
+              [0.95, 0.00, 0.05],
+              [0.95, 0.00, 0.05],
+              [0.90, 0.00, 0.10]]
+meteoric = true
+tau_crit_Myr = 0.02
+dphi_mold = 0.06
+dphi_cem = 0.08
+burial_cementation = true
+z_ch_m = 1000.0
+c_ch_per_km = 0.30
+dolomitization = false
+dolomite_zone_m = 100.0
+dolomite_fraction = 0.8
+dphi_dolomite = 0.02
+deep_leaching = false
+leaching_zone_m = 80.0
+dphi_vug = 0.04
+clay_in_argillaceous = 0.30
+
+# Step 5, rock physics (Sect. 3.5, Table 4)
+[rockphysics]
+model = "xu_payne"          # or "rhg"
+aspect_ratios = [0.15, 0.80, 0.02]
+dem_steps = 20
+# [K (GPa), mu (GPa), rho (g/cm3)]
+calcite = [76.8, 32.0, 2.71]
+dolomite = [94.9, 45.0, 2.87]
+clay = [21.0, 7.0, 2.58]
+brine = [2.80, 0.0, 1.05]
+gas = [0.08, 0.0, 0.25]
+gas_column_m = 0.0          # 0 = brine-saturated base case
+gas_saturation = 0.8
+
+# Step 6, earth model (Sect. 3.6, Table 5); trace spacing and depth sampling of the model grid
+[earthmodel]
+water_depth_m = 100.0
+overburden_m = 2000.0
+dz_m = 1.0
+trace_spacing_m = 25.0
+basement_thickness_m = 300.0
+clastic_vp0_m_s = 1600.0
+clastic_vp_gradient_per_s = 0.55
+clastic_vp_max_m_s = 3400.0
+background_vp_offset_m_s = 0.0
+basement = [5800.0, 3200.0, 2.65]   # Vp (m/s), Vs (m/s), rho (g/cm3)
+
+# Step 7, seismic (Sect. 3.7)
+[seismic]
+wavelet = "ricker"
+dominant_frequency_Hz = 30.0
+dt_ms = 2.0
+dt_fine_ms = 0.25
+psf = true
+psf_max_dip_deg = 45.0
+psf_window_m = 400.0
+noise_snr = 0.0             # RMS signal / RMS noise of band-limited random noise; 0 = noise-free
+noise_seed = 0
+
+[standin]                   # development stand-in for CarboKitten (Python, coarser)
+output = "data/carbokitten/luconia_base_standin.h5"
+ny = 16
+dt_yr = 2000.0
+write_interval = 1
+seed = 1
+
+[constant_impedance]        # E1 reference "DC" (carboseis run --constant-impedance): one [Vp (m/s), rho (g/cm3)] per facies
+vp_rho = [[5200.0, 2.55], [4600.0, 2.45], [3800.0, 2.30], [4300.0, 2.40]]

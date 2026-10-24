@@ -1,0 +1,59 @@
+part,scenario,setting,metric,value
+a,DC,layer scale,median |R| at flooding surfaces,0.0230
+a,DC,layer scale,median |R| at reference horizons,0.0156
+a,DC,layer scale,flooding-surface percentile,0.6136
+a,DC,layer scale,mean reflection coefficient at flooding surfaces (seismic sign),-0.0075
+b,DC,30 Hz,strength percentile,0.4857
+b,DC,30 Hz,continuity percentile,0.5143
+b,DC,60 Hz,strength percentile,0.5714
+b,DC,60 Hz,continuity percentile,0.4000
+a,D0,layer scale,median |R| at flooding surfaces,0.0105
+a,D0,layer scale,median |R| at reference horizons,0.0054
+a,D0,layer scale,flooding-surface percentile,0.6330
+a,D0,layer scale,mean reflection coefficient at flooding surfaces (seismic sign),0.0041
+a,all,layer scale,fraction of flooding surfaces on a hiatus,0.2308
+a,all,layer scale,water-depth change across flooding surfaces (m),0.3932
+b,D0,30 Hz,strength percentile,0.6216
+b,D0,30 Hz,continuity percentile,0.4324
+b,D0,60 Hz,strength percentile,0.4595
+b,D0,60 Hz,continuity percentile,0.5946
+a,D1,layer scale,median |R| at flooding surfaces,0.0198
+a,D1,layer scale,median |R| at reference horizons,0.0073
+a,D1,layer scale,flooding-surface percentile,0.7886
+a,D1,layer scale,mean reflection coefficient at flooding surfaces (seismic sign),0.0171
+b,D1,30 Hz,strength percentile,0.3784
+b,D1,30 Hz,continuity percentile,0.3243
+b,D1,60 Hz,strength percentile,0.5135
+b,D1,60 Hz,continuity percentile,0.6757
+a,D2,layer scale,median |R| at flooding surfaces,0.0126
+a,D2,layer scale,median |R| at reference horizons,0.0071
+a,D2,layer scale,flooding-surface percentile,0.6398
+a,D2,layer scale,mean reflection coefficient at flooding surfaces (seismic sign),0.0099
+b,D2,30 Hz,strength percentile,0.5278
+b,D2,30 Hz,continuity percentile,0.4444
+b,D2,60 Hz,strength percentile,0.5556
+b,D2,60 Hz,continuity percentile,0.5833
+c,D1,step 5 m,strength percentile,0.4865
+c,D1,step 5 m,continuity percentile,0.5135
+c,D2,step 5 m,strength percentile,0.4865
+c,D2,step 5 m,continuity percentile,0.5946
+c,D1,step 10 m,strength percentile,0.6216
+c,D1,step 10 m,continuity percentile,0.5676
+c,D2,step 10 m,strength percentile,0.5676
+c,D2,step 10 m,continuity percentile,0.5676
+c,D1,step 20 m,strength percentile,0.3784
+c,D1,step 20 m,continuity percentile,0.3243
+c,D2,step 20 m,strength percentile,0.5278
+c,D2,step 20 m,continuity percentile,0.4444
+c,D1,exponential 5 m,strength percentile,0.6216
+c,D1,exponential 5 m,continuity percentile,0.5135
+c,D2,exponential 5 m,strength percentile,0.5405
+c,D2,exponential 5 m,continuity percentile,0.5676
+c,D1,exponential 10 m,strength percentile,0.5676
+c,D1,exponential 10 m,continuity percentile,0.5676
+c,D2,exponential 10 m,strength percentile,0.5278
+c,D2,exponential 10 m,continuity percentile,0.5278
+c,D1,exponential 20 m,strength percentile,0.6216
+c,D1,exponential 20 m,continuity percentile,0.5405
+c,D2,exponential 20 m,strength percentile,0.4444
+c,D2,exponential 20 m,continuity percentile,0.3333

@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below, together with CarboKitten.jl and CarboSeis."
+title: "CarboSeis-CarboKitten bridge: running CarboKitten.jl from CarboSeis scenario files"
+version: 0.1.0.dev3
+license: GPL-3.0-or-later
+authors:
+  - family-names: Li
+    given-names: Yupeng
+references:
+  - type: article
+    title: "CarboKitten.jl -- an open source toolkit for carbonate stratigraphic modeling"
+    authors:
+      - family-names: Hidding
+        given-names: Johan
+      - family-names: Jarochowska
+        given-names: Emilia
+      - family-names: Hohmann
+        given-names: Niklas
+      - family-names: Liu
+        given-names: Xianyi
+      - family-names: Burgess
+        given-names: Peter
+      - family-names: Spreeuw
+        given-names: Hanno
+    journal: "Geoscientific Model Development"
+    year: 2026
+    volume: 19
+    start: 6207
+    end: 6229
+    doi: 10.5194/gmd-19-6207-2026

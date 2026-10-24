@@ -1,0 +1,5 @@
+scenario,median_strength,median_continuity,n_flooding_surfaces,reference_median_strength,reference_median_continuity,n_reference_horizons,strength_percentile_vs_reference,continuity_percentile_vs_reference,interior_rms_over_top_amplitude
+DC,1.353,0.744,11,1.367,0.721,35,0.49,0.51,0.160
+D0,0.792,0.209,11,0.735,0.209,37,0.62,0.43,0.195
+D1,0.881,0.302,11,0.976,0.442,37,0.38,0.32,0.202
+D2,0.885,0.395,11,0.871,0.395,36,0.53,0.44,0.121

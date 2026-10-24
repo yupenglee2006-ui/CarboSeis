@@ -1,0 +1,13 @@
+parameter,top-carbonate amplitude,continuous intra-platform reflectors,platform RMS amplitude,platform width in TWT,margin dip,internal dominant frequency,high-amplitude continuous facies,n_statistics_detectable,n_elementary_effects_min
+Sea-level amplitude scale,0.223,0.266,1.76,2.74,0.222,0.332,0.327,2,6
+Sea-level time stretch,0.893,0.0704,1.15,0.224,0.229,0.0323,0.143,1,7
+Subsidence rate (m/Myr),4.23,1.37,2.8,42.1,0.557,0.0465,0.433,4,9
+Euphotic max. growth (m/Myr),0.854,0.216,0.101,2.46,0.432,0.0287,0.398,1,8
+Transport coefficient (m/yr),0.272,2.21,1.67,33.1,0.863,0.0546,0.0757,3,5
+Meteoric tau_crit (Myr),0.0367,0.0539,0.393,0,0.00201,0.0166,0.0338,0,8
+Moldic porosity gain,0.524,0.682,1.42,0,0.681,0.159,0.116,1,9
+Burial cementation c_ch (1/km),11.7,0.245,3.05,0,0.23,0.0489,0.368,2,10
+Compaction coefficient scale,37.9,0.682,6.28,0.0135,0.551,0.082,0.221,2,9
+Interparticle aspect ratio,13.4,0.266,0.642,0,0.322,0.47,0.157,1,6
+Gas column (m),3.44,0.118,0.879,0,0.46,0.0143,0.228,1,9
+Dominant frequency (Hz),0.322,1.94,2.82,0,0.0578,1.38,1.14,4,8
